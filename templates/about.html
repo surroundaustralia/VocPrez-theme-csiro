@@ -1,0 +1,23 @@
+{% extends "page.html" %}
+
+{% set active_page = "about" %}
+
+{% block breadcrumbs %}
+  <p class="breadcrumbs"><a href="{{ url_for('index') }}">System Home</a> / <a href="{{ url_for('about') }}">About</a></p>
+{% endblock %}
+
+{% block content %}
+<div id="content-left">
+    <p><em>This content is the same as the README page from <a href="https://github.com/RDFlib/VocPrez">this system's code repository</a>.</em></p>
+    {{ content }}
+</div>
+<div id="content-right">
+    {% include 'nav.html' %}
+    <hr/>
+    <p class="last-updated">Last updated: 12 July 2021</p>
+    <div id="vocprez">
+      made by <a href="http://github.com/rdflib/VocPrez">VocPrez</a>&nbsp;
+      <a id="versionlink" href="https://github.com/RDFLib/VocPrez/releases/tag/{{ utils.version() }}">{{ utils.version() }}</a>
+    </div>
+</div>
+{% endblock %}

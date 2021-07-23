@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>CSIRO VocPrez</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='vocprez.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c112c4b9c0.js" crossorigin="anonymous"></script>
+  {%- if extra_styling is defined %}
+  <style>
+      {{ extra_styling }}
+  </style>
+  {% endif %}
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div id="header-top">
+      <img src="{{ url_for('static', filename='csiro-logo.png') }}" alt="csiro-logo" id="logo">
+      <div id="header-top-right">
+        <div id="header-tagline">Australia's National Science Agency</div>
+        <div id="header-nav">
+          <a href="" class="header-nav-item">About <i class="far fa-chevron-down"></i></a>
+          <a href="" class="header-nav-item">Research <i class="far fa-chevron-down"></i></a>
+          <a href="" class="header-nav-item">Work With Us <i class="far fa-chevron-down"></i></a>
+          <a href="" class="header-nav-item">Careers <i class="far fa-chevron-down"></i></a>
+          <a href="" class="header-nav-item">Education <i class="far fa-chevron-down"></i></a>
+          <a href="" class="header-nav-item">News</a>
+          <a href="" class="header-nav-item">Events</a>
+          <a href="" class="header-nav-item header-search"><i class="far fa-search"></i></a>
+        </div>
+      </div>
+    </div>
+    <div id="header-breadcrumbs">
+      {% block breadcrumbs %}{% endblock %}
+    </div>
+    <div id="header-bottom">
+      <h1 id="page-title">CSIRO VocPrez</h1>
+      <div id="header-socials">
+        <div class="social-share"><i class="far fa-share-alt"></i> Share</div>
+        <a href="" class="header-social"><i class="fab fa-facebook-f"></i></a>
+        <a href="" class="header-social"><i class="fab fa-twitter"></i></a>
+        <a href="" class="header-social"><i class="fab fa-linkedin-in"></i></a>
+        <a href="" class="header-social"><i class="fas fa-envelope"></i></a>
+        <button class="header-contact">Contact</button>
+      </div>
+    </div>
+  </header>
+  <!-- Content -->
+  <div id="content">
+    {% block content %}{% endblock %}
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div id="footer-top-container">
+      <div id="footer-top">
+        <div id="footer-top-left">
+          <h3>At CSIRO, we solve the greatest challenges through innovative science and technology.</h3>
+          <div id="footer-socials">
+            <a href="" class="footer-social"><i class="far fa-blog"></i></a>
+            <a href="" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="" class="footer-social"><i class="fab fa-instagram"></i></a>
+            <a href="" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="" class="footer-social"><i class="fab fa-spotify"></i></a>
+            <a href="" class="footer-social"><i class="fab fa-twitter"></i></a>
+            <a href="" class="footer-social"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div id="footer-top-links">
+            <a href="">Access to information</a> |
+            <a href="">Accessibility</a> |
+            <a href="">Copyright</a> |
+            <a href="">Legal notice and disclaimer</a> |
+            <a href="">Policy & Guidelines</a> |
+            <a href="">Your privacy</a>
+          </div>
+          <div>We are committed to child safety and to the implementation of <a href="">Child Safe principles and procedures</a>.</div>
+        </div>
+        <div id="footer-top-right">
+          <div id="contact-footer">
+            <button class="btn btn-lg">Contact us</button>
+            <div id="contact-footer-phone">
+              <i class="far fa-phone"></i>
+              <a href="">1300 363 400 </a>
+            </div>
+          </div>
+          <h3>Subscribe to our newsletter</h3>
+          <div id="subscribe-form">
+            <input type="email" name="" id="" placeholder="Your email address" class="subscribe-input">
+            <button class="btn btn-lg">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-bottom-container">
+      <div id="footer-bottom">
+        CSIRO acknowledges the Traditional Owners of the land, sea and waters, of the area that we live and work on across Australia. We acknowledge their continuing connection to their culture and pay our respects to their Elders past and present. View our <a href="">vision towards reconciliation</a>.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

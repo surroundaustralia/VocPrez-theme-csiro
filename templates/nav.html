@@ -1,0 +1,9 @@
+<div id="sidenav-container">
+    <a class="sidenav-title" href="{{ url_for('index') }}">CSIRO VocPrez</a>
+    <div id="sidenav">
+        <a class="sidenav-item {% if active_page == 'vocab' %}active{% endif %}" href="{{ url_for('vocabularies') }}">Vocabularies</a>
+        <a class="sidenav-item {% if active_page == 'search' %}active{% endif %}" href="{{ url_for('search') }}">Search</a>
+        <a class="sidenav-item {% if active_page == 'sparql' %}active{% endif %}" href="{{ url_for('sparql') }}">SPARQL</a>
+        <a class="sidenav-item {% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About the System</a>
+    </div>
+</div>

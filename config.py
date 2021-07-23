@@ -14,12 +14,11 @@ RETRY_SLEEP_SECONDS = 10
 SPARQL_TIMEOUT = 60
 PORT = 5000
 
-#
-#   Vocabulary data sources
+# Vocabulary data sources
 #
 # Here is the list of vocabulary sources that this instance uses. FILE, SPARQL, RVA & VOCBENCH are implemented already
 # and are on by default (e.g. VOCBENCH = None) but other sources, such as GitHub can be added. To enable them, add a new
-# like like VocBench.XXX = None
+# like VocBench.XXX = None
 class VocabSource:
     FILE = "FILE"
     SPARQL = "SPARQL"
@@ -29,9 +28,9 @@ class VocabSource:
 
 
 # BEGIN Instance Vars
-SYSTEM_URI_BASE = "http://localhost:{}".format(PORT)
+SYSTEM_BASE_URI = "$SYSTEM_BASE_URI"
 USE_SYSTEM_URIS = True
-DEBUG = True
+DEBUG = False
 SPARQL_ENDPOINT = "$SPARQL_ENDPOINT"
 SPARQL_USERNAME = $SPARQL_USERNAME
 SPARQL_PASSWORD = $SPARQL_PASSWORD
@@ -50,6 +49,6 @@ DATA_SOURCES = {
 
 # BEGIN Vocabs list info
 VOCS_TITLE = "CSIRO Vocabularies"
-VOCS_URI = "https://www.csiro.au/"
-VOCS_DESC = "Vocabularies managed and published by CSIRO"
+VOCS_URI = "http://registry.it.csiro.au/def/soil/au/asls"
+VOCS_DESC = "Vocabularies managed and published by the Commonwealth Scientific and Industrial Research Organisation (CSIRO)"
 # END Vocabs list info

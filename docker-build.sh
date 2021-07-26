@@ -26,7 +26,7 @@ sed -i 's#$SYSTEM_BASE_URI#'"$SYSTEM_BASE_URI"'#' $VP_THEME_HOME/config_updated.
 mv $VP_THEME_HOME/config_updated.py $VP_HOME/deploy/_config/__init__.py
 
 echo "run Dockerfile there"
-docker build -t vocprez-cgi -f $VP_HOME/Dockerfile $VP_HOME
+docker build -t vocprez-csiro -f $VP_HOME/Dockerfile $VP_HOME
 
 echo "clean-up"
 rm -r $VP_HOME/deploy
